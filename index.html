@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" name="viewport">
+    <meta content="telephone=no,email=no,date=no,address=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="小鸡吧/小鸡吧520,xjb520.com有你">
+    <meta name="keywords" content="小鸡吧,小鸡吧520,xjb520,xjb520.com有你">
+    <title>小鸡吧</title>
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            background: #f6f7f7;
+            color: #333;
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        .header {
+            padding-top: 10px;
+            text-align: center;
+            background: #fff;
+            height: 68px;
+            overflow: hidden;
+        }
+
+        .header .cont {
+            display: inline-block;
+        }
+
+        .header .logo {
+            float: left;
+        }
+
+        .header .logo img {
+            float: left;
+        }
+
+        .header .txt {
+            margin-top: 10px;
+            margin-left: 10px;
+            line-height: 22px;
+            font-size: 14px;
+            text-align: left;
+            float: left;
+        }
+
+        .notice {
+            background: rgb(250, 189, 6);
+            line-height: 40px;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .notice .cont {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .default {
+            line-height: 60px;
+            color: #000;
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .default #close-go {
+            display: inline-block;
+            background: #f11717;
+            line-height: 25px;
+            border-radius: 3px;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 0 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .default #close-go:hover {
+            color: #ccc;
+        }
+
+        .list {
+            background: #fff;
+            padding: 10px;
+            border-radius: 3px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0px auto;
+        }
+
+        ul li {
+            cursor: pointer;
+            line-height: 45px;
+            border-bottom: 1px solid #f8f8f8;
+            font-size: 14px;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        ul li:hover,
+        ul li.active {
+            color: rgb(212, 141, 9);
+            background: rgba(255, 16, 255, 0.066);
+        }
+
+        ul li:last-child {
+            border: 0;
+        }
+
+        ul li span {
+            color: #f11717;
+        }
+
+        @media screen and (max-width: 800px) {
+            .notice {
+                font-size: 14px;
+                padding-left: 5px;
+                line-height: 35px;
+            }
+            ul li {
+                line-height: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="cont">
+            <div class="logo">
+                <img src="./img/www.png" alt="小鸡吧">
+            </div>
+            <div class="txt">
+                <p>欢迎使用小鸡吧导航</p>
+                <p>交流群：
+                    <font color="red">320310978</font>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="notice">
+        <div class="cont">
+            <img src="./img/tongzhi.gif" alt="小鸡吧">
+            <span>&nbsp;&nbsp;请按ctrl+D收藏本站，方便你找到回家的路</span>
+        </div>
+    </div>
+    <div class="default">
+        <span style="color: red" id="timer">20</span>
+        秒后将默认跳转到: 第一区
+        <span id="close-go">不想跳转</span>
+    </div>
+    <div class="list">
+        <ul>
+        </ul>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
