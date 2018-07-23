@@ -46,7 +46,9 @@ window.onload = function () {
             if (isMobile) {
                 window.location.href = item.url;
             } else {
-                window.open(item.url)
+                clearInterval(clearTime);
+                closeGo.parentNode.parentNode.removeChild(closeGo.parentNode);
+                window.open(item.url);
             }
             
         }
