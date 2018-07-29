@@ -6,7 +6,7 @@ window.onload = function () {
     let num = 20;
     let list = [{
             name: '<span>【视频】</span>阿顺-AV在线观看区',
-            url: 'http://ashun520.com'
+            url: 'http://xjb1990.com'
         },
         {
             name: '<span>【小说】</span>小鸡吧短文小说区',
