@@ -145,6 +145,13 @@
                 line-height: 35px;
             }
         }
+        .active{ animation: change 1s  ease-in  infinite ; font-size: 18px; font-weight: bold}
+        @keyframes change {
+            0%{ text-shadow: 0 0 4px #f00}
+            50%{ text-shadow: 0 0 40px #f00}
+            100%{ text-shadow: 0 0 4px #f00}
+        }
+
     </style>
 </head>
 
@@ -170,7 +177,7 @@
     </div>
     <div class="default">
         <span style="color: red" id="timer">20</span>
-        秒后将默认跳转到: 第一区
+        秒后将默认跳转到: 第五区
         <span id="close-go">不想跳转</span>
     </div>
     <div class="list">
@@ -186,18 +193,28 @@
         var num = 20;
         var list = [{
                 name: '<span>【视频】</span>阿顺-AV在线观看区',
-                url: 'xjb1990',
-                suffix: '.com'
-            },
-            {
-                name: '<span>【小说】</span>小鸡吧短文小说区',
                 url: 'ashun1',
                 suffix: '.com'
             },
             {
+                name: '<span>【小说】</span>小鸡吧短文小说区',
+                url: 'xjb520',
+                suffix: '.vip'
+            },
+            {
                 name: '<span>【视频】</span>橙子-AV在线欣赏区-不容错过',
-                url: 'xjb1991',
-                suffix: '.com'
+                url: 'xjb1992',
+                suffix: '.xyz'
+            },
+            {
+                name: '<span>【视频】</span>老和尚经典视频（老版本二区）',
+                url: 'xjb1992',
+                suffix: '.cn'
+            },
+            {
+                name: '<span>【视频】</span>🍊最新版橙子-AV在线（不容错过）',
+                url: 'xjb666',
+                suffix: '.xyz'
             }
         ]
 
@@ -205,9 +222,8 @@
         var clearTime = setInterval(function () {
             num--;
             timer.innerHTML = num;
-            console.log(1)
             if (num === 0) {
-                window.location.href = 'http://'+list[2].url+list[2].suffix;
+                window.location.href = 'http://'+list[4].url+list[4].suffix;
                 timer.innerHTML = '正在跳转...';
                 clearInterval(clearTime);
             }
@@ -229,7 +245,7 @@
         list.forEach(function (item, idx) {
             li = document.createElement('li');
             li.innerHTML = item.name;
-            if (idx === 2) li.setAttribute('class', 'active')
+            if (idx === 4) li.setAttribute('class', 'active')
             ulList.appendChild(li);
             li.onclick = function () {
                 if (isMobile) {
