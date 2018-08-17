@@ -156,6 +156,40 @@
 </head>
 
 <body>
+    <script>
+        var params = window.location.search.split('?myparams=');
+        var list = [{
+                name: '<span>【视频】</span>阿顺-AV在线观看区',
+                url: 'ashun1',
+                suffix: '.com'
+            },
+            {
+                name: '<span>【小说】</span>小鸡吧短文小说区',
+                url: 'xjb520',
+                suffix: '.vip'
+            },
+            {
+                name: '<span>【视频】</span>橙子-AV在线欣赏区-不容错过',
+                url: 'xjb1992',
+                suffix: '.xyz'
+            },
+            {
+                name: '<span>【视频】</span>老和尚经典视频（老版本二区）',
+                url: 'xjb1992',
+                suffix: '.cn'
+            },
+            {
+                name: '<span>【视频】</span>🍊最新版橙子-AV在线（不容错过）',
+                url: 'xjb666',
+                suffix: '.xyz'
+            }
+        ];
+        if (params && params.length > 1 && Number(params[1])) {
+            var obj = list[Number(params[1]) - 1];
+            window.location.href= 'http://' + obj.url + obj.suffix;
+        }
+        
+    </script>
     <div class="header">
         <div class="cont">
             <div class="logo">
@@ -191,33 +225,6 @@
         var ulList = document.querySelector('.list ul');
         var li = '';
         var num = 20;
-        var list = [{
-                name: '<span>【视频】</span>阿顺-AV在线观看区',
-                url: 'ashun1',
-                suffix: '.com'
-            },
-            {
-                name: '<span>【小说】</span>小鸡吧短文小说区',
-                url: 'xjb520',
-                suffix: '.vip'
-            },
-            {
-                name: '<span>【视频】</span>橙子-AV在线欣赏区-不容错过',
-                url: 'xjb1992',
-                suffix: '.xyz'
-            },
-            {
-                name: '<span>【视频】</span>老和尚经典视频（老版本二区）',
-                url: 'xjb1992',
-                suffix: '.cn'
-            },
-            {
-                name: '<span>【视频】</span>🍊最新版橙子-AV在线（不容错过）',
-                url: 'xjb666',
-                suffix: '.xyz'
-            }
-        ]
-
         // 倒计时
         var clearTime = setInterval(function () {
             num--;
