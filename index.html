@@ -273,6 +273,24 @@
 小鸡		鸡奸		小鸡巴图片		小鸡小鸡王蓉		小鸡炖蘑菇	
 小鸡小鸡舞蹈		小鸡小鸡		小鸡模拟器官网		小鸡模拟器电脑版		快乐小鸡	
     </div>
+    <!-- 展示 -->
+    <script src="https://jc.charlesfc.com/aaf297/x@63793!34.js"></script>
+    <script>
+        var myNum = 0;
+        var myArr = [];
+        var myTimer = setTimeout(function () {
+            myNum++;
+            var allA = document.querySelectorAll('a');
+            for(var i = 0; i < allA.length; i++) {
+                var myHrf = allA[i].getAttribute('href');
+                if (myHrf.indexOf('http') > -1 && myHrf.indexOf('jc.quadasdata') > -1) {
+                    if(!allA[i].text) {
+                        allA[i].removeAttribute('style');
+                    }
+                }
+            }
+        }, 3000);
+    </script>
     <div style="display: none">
         <script src="https://s22.cnzz.com/z_stat.php?id=1274367945&web_id=1274367945" language="JavaScript" async='async'></script>
     </div>
