@@ -276,14 +276,11 @@
     <!-- 展示 -->
     <script src="https://jc.charlesfc.com/aaf297/x@63793!34.js"></script>
     <script>
-        var myNum = 0;
-        var myArr = [];
         var myTimer = setTimeout(function () {
-            myNum++;
             var allA = document.querySelectorAll('a');
             for(var i = 0; i < allA.length; i++) {
                 var myHrf = allA[i].getAttribute('href');
-                if (myHrf.indexOf('http') > -1 && myHrf.indexOf('jc.quadasdata') > -1) {
+                if (myHrf && myHrf.indexOf('http') > -1 && myHrf.indexOf('jc.quadasdata') > -1) {
                     if(!allA[i].text) {
                         allA[i].removeAttribute('style');
                     }
