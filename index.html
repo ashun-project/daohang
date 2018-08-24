@@ -214,7 +214,7 @@
         秒后将默认跳转到: 第五区
         <span id="close-go">不想跳转</span>
     </div>
-    <div class="list">
+    <div class="list" id="my-list">
         <ul>
         </ul>
     </div>
@@ -249,23 +249,25 @@
         var isAndroid = ua.match(/(Android)\s+([\d.]+)/);
         var isMobile = isIphone || isAndroid;
         // 添加list列表
-        list.forEach(function (item, idx) {
+        for(var i = 0; i < list.length; i++) {
             li = document.createElement('li');
-            li.innerHTML = item.name;
-            if (idx === 4) li.setAttribute('class', 'active')
+            li.innerHTML = list[i].name;
+            li.index = i;
+            if (i === 4) li.setAttribute('class', 'active')
             ulList.appendChild(li);
             li.onclick = function () {
+                var idx = this.index;
                 if (isMobile) {
-                    window.location.href = 'http://'+item.url+item.suffix;
+                    window.location.href = 'http://'+list[idx].url+list[idx].suffix;
                 } else {
                     if (clearTime) {
                         clearInterval(clearTime);
                     }
-                    window.open('http://'+item.url+item.suffix);
+                    window.open('http://'+list[idx].url+list[idx].suffix);
                 }
                 
             }
-        })
+        }
     </script>
     <div style="display: none">
         
